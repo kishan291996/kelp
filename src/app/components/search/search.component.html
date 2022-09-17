@@ -1,0 +1,63 @@
+<!-- <div class="wrapper">
+  <form action="#">
+<mat-form-field appearance="outline">
+  <input
+    matInput
+    type="text"
+    placeholder="Search For GitHub Users"
+    [formControl]="control"
+    [matAutocomplete]="auto"
+  />
+  <mat-autocomplete #auto="matAutocomplete">
+    <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
+      {{ street }}
+    </mat-option>
+  </mat-autocomplete>
+</mat-form-field>
+
+<button mat-raised-button>Search</button>
+</form>
+</div> -->
+
+
+
+<div class="headingStyle">Search Users</div>
+
+<div class="wrapper">
+  <form action="#">
+      <input
+        type="text"
+        placeholder="Search For GitHub Users"
+        [formControl]="control"
+        [matAutocomplete]="auto"
+      />
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let street of filteredStreets | async" [value]="street">
+          {{ street }}
+        </mat-option>
+      </mat-autocomplete>
+    
+    <button mat-raised-button (click)="onSearch()">Search</button>
+    
+  </form>
+
+</div>
+
+<div class="wrapper1">
+  {{errMsg}}
+
+  <table class="table" *ngIf="searchedRecords?.length > 0">
+    <thead>
+      <tr>
+        <th>UserName</th>
+        <th>UserType</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let val of searchedRecords">
+      <tr>
+        <td>{{val.username}}</td>
+        <td>{{val.usertype}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

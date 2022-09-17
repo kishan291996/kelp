@@ -1,0 +1,29 @@
+{
+  "gitHubUsers": [
+    {
+      "id": 1,
+      "username": "Test - 1",
+      "usertype": "Public"
+    },
+    {
+      "id": 11,
+      "username": "Test - 1",
+      "usertype": "Public1"
+    },
+    {
+      "id": 2,
+      "username": "Test - 2",
+      "usertype": "Public"
+    },
+    {
+      "id": 3,
+      "username": "Test - 3",
+      "usertype": "Public"
+    },
+    {
+      "id": 4,
+      "username": "Test - 4",
+      "usertype": "Public"
+    }
+  ]
+}

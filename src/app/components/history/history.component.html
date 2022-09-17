@@ -1,0 +1,21 @@
+  <div class="headingStyle">History Details</div>
+
+<div class="wrapper1">
+
+    {{errMsg}}
+
+    <table class="table" *ngIf="historyDetails?.length > 0">
+      <thead>
+        <tr>
+          <th>UserName</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let val of historyDetails;let indexOfelement=index;">
+        <tr>
+          <td>{{val.val}}</td>
+          <td> <span class="glyphicon glyphicon-trash icn" (click)="onDelete(val.val,indexOfelement)"></span> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
